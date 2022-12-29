@@ -1,0 +1,52 @@
+import React from 'react'
+
+const Contact = () => {
+  return (
+    <div
+      name="contact"
+      className="w-full h-screen p-4"
+    >
+      <div className="flex flex-col p-4 justify-center max-w-screen-lg mx-auto h-full pt-20">
+        <div className="pb-8">
+          <p className="text-4xl font-bold inline border-b-4 border-blue-500">
+            Contact Us
+          </p>
+          <p className="py-6">Send me a message if any Queries.</p>
+        </div>
+
+        <div className=" flex justify-center items-center">
+          <form
+            action="https://formspree.io/f/xgebwjkr"
+            method="POST"
+            className=" flex flex-col w-full md:w-1/2"
+          >
+            <input
+              type="text"
+              name="user name"
+              placeholder="Enter your name"
+              className="p-2 bg-transparent border-2 rounded-md text-red-600 focus:outline-none"
+            />
+            <input
+              type="text"
+              name="user email"
+              placeholder="Enter your email"
+              className="my-4 p-2 bg-transparent border-2 rounded-md focus:outline-none"
+            />
+            <textarea
+              name="message from user"
+              placeholder="Enter your message"
+              rows="5"
+              className="p-2 bg-transparent border-2 rounded-md focus:outline-none"
+            ></textarea>
+
+            <button className="text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto flex items-center rounded-md hover:scale-110 duration-300">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Contact
